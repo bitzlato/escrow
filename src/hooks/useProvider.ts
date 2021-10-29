@@ -2,7 +2,11 @@ import React from 'react';
 import MetaMaskOnboarding from '@metamask/onboarding';
 import { getMetaMaskProvider, ProviderRpcError } from 'src/provider';
 
-export function useProvider(): [string | undefined, () => void, string | undefined] {
+export function useProvider(): [
+  string | undefined,
+  () => void,
+  string | undefined,
+] {
   const [error, setError] = React.useState<string | undefined>('');
   const [accounts, setAccounts] = React.useState<string[]>([]);
   const onboarding = React.useMemo(() => new MetaMaskOnboarding(), []);

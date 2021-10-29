@@ -9,7 +9,7 @@ const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default;
 
 const BUILD_DIR = path.resolve(__dirname, './build');
 const HASH = Math.round(Date.now() / 1000).toString();
-const ASSET_PATH = process.env.ASSET_PATH || './';
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 

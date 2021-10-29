@@ -9,6 +9,7 @@
     "style:lint": "stylelint '**/*.pcss'",
     "start": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
+    "build-gh": "cross-env ASSET_PATH='/escrow/' && yarn build",
     "analyze": "cross-env NODE_ENV=production ANALYZE=enable webpack",
     "test": "jest --config jest.config.js --silent",
     "test:coverage": "jest --config jest.config.js --collectCoverage=true",
