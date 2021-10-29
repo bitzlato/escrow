@@ -22,7 +22,7 @@ jobs:
           node-version: ${{ env.NVMRC }}
           cache: 'yarn'
       - run: yarn install
-      - run: yarn build-gh
+      - run: yarn build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5

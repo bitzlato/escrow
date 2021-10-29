@@ -9,7 +9,6 @@ const StatoscopeWebpackPlugin = require('@statoscope/webpack-plugin').default;
 
 const BUILD_DIR = path.resolve(__dirname, './build');
 const HASH = Math.round(Date.now() / 1000).toString();
-const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -32,7 +31,7 @@ module.exports = {
     filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
     chunkFilename: '[id].[contenthash].js',
     globalObject: 'this',
-    publicPath: ASSET_PATH,
+    publicPath: '/',
   },
 
   resolve: {
@@ -158,7 +157,6 @@ module.exports = {
 
     new webpack.EnvironmentPlugin({
       HASH,
-      ASSET_PATH,
     }),
 
     new HtmlWebpackPlugin({
