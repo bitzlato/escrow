@@ -31,7 +31,7 @@ module.exports = {
     filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
     chunkFilename: '[id].[contenthash].js',
     globalObject: 'this',
-    publicPath: './',
+    publicPath: isDevelopment ? '/' : './',
   },
 
   resolve: {

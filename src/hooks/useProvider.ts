@@ -1,6 +1,9 @@
 import React from 'react';
 import MetaMaskOnboarding from '@metamask/onboarding';
-import { getMetaMaskProvider, ProviderRpcError } from 'src/provider';
+import {
+  getMetaMaskProvider,
+  ProviderRpcError,
+} from '@bitzlato/ethereum-provider';
 
 export function useProvider(): [
   string | undefined,

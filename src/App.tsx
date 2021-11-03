@@ -1,11 +1,12 @@
 import * as React from 'react';
 
-import { useProvider } from './hooks/useProvider';
 import {
   isMetaMaskInstalled,
   getMetaMaskProvider,
   getChainName,
-} from './provider';
+} from '@bitzlato/ethereum-provider';
+
+import { useProvider } from './hooks/useProvider';
 
 export const App = () => {
   const [account, activate, error] = useProvider();
